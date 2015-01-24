@@ -1,0 +1,12 @@
+header, nav, footer, article, section {
+	border: 1px solid blue;
+	margin: 10px;
+	padding: 10px;
+	font-weight: bold;
+}
+
+nav ul li{
+	display: inline;
+	margin: 5px;
+	
+}

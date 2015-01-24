@@ -5,6 +5,9 @@
    	<struts>
    		<constant name="struts.devMode" value="true" />
    		<package name="accountPackage" extends="struts-default">
+   			<interceptors>
+   				<interceptor name="LoginInterceptor" class="tutorial.strutsTutorial.interceptor.LoginInterceptor" />
+   			</interceptors>
    			<action name="LoginHere">
       			<result>/jsp/Login.jsp</result>
     		</action>
@@ -13,6 +16,11 @@
     		</action>
    			
    			<action name="Login" class="tutorial.strutsTutorial.action.LoginAction" method="execute">
+   				<interceptor-ref name="params"/>
+   				<interceptor-ref name="validation"/>
+   				<interceptor-ref name="workflow" />
+   				<interceptor-ref name="LoginInterceptor" />
+   				<result name="input">/jsp/Login.jsp</result>
    				<result name="Success">/jsp/Account.jsp</result>
    				<result name="Failure">/jsp/Login.jsp</result>
    			</action>

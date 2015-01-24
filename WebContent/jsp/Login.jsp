@@ -10,10 +10,16 @@
 <body>
 	<s:property value="loginModel.loginFailure" /><br/>
 	<form action="Login" method="post">
-		User Name:<input type="text" name="loginModel.userName"><br/>
-		Password :<input type="password" name="loginModel.password"><br/>
+		
+		User Name:<input type="text" name="loginModel.userName" /><s:fielderror fieldName="loginModel.userName" cssStyle="color:red"></s:fielderror><br/>
+		Password :<input type="password" name="loginModel.password" /><s:fielderror fieldName="loginModel.password" cssStyle="color:red"></s:fielderror><br/>
 		<input type="submit" value="Log In">
 	</form>
-	New User. <a href="<s:url action='RegisterHere' />" >Register Her</a>
+	<!-- <s:form action="Login" method="post">
+      <s:textfield name="loginModel.userName" label="User Name" size="20" /><br/>
+      <s:textfield name="loginModel.password" label="Password" size="20" /><br/>
+      <s:submit name="submit" label="Log In" align="center" />
+   </s:form> -->
+	New User. <a href="<s:url action='RegisterHere' />" >Register Here</a>
 </body>
 </html>
