@@ -19,7 +19,7 @@
 	 ng-init="points=[1,2,3,4,5]" array
 	 ng-repeat for looping
  -->
-	<div ng-app="" ng-controller="userController">
+	<div ng-app="myapp" ng-controller="MyController">
 		<p>Name: <input type="text" ng-model="name" /></p>
 		<p>Gender: <input type="radio" ng-model="gender" value="Male"/>Male &nbsp; <input type="radio" ng-model="gender" value="Female"/>Female</p>
 		<p>Your Salary: <input type="number" ng-model="salary" /></p>
@@ -40,7 +40,7 @@
 		<button ng-click="toggle()">Toggle View</button>
 	</div>
 	<script>
-		function userController($scope){
+		angular.module("myapp",[]).controller("MyController", function($scope){
 			$scope.profession = ['software developer','manager','admin'],
 			$scope.getUserId = function(){
 				return $scope.name+"_"+$scope.gender;
@@ -49,7 +49,7 @@
 			$scope.toggle = function(){
 				$scope.shallHide = !$scope.shallHide;
 			}
-		}
+		});
 	</script>
 </body>
 

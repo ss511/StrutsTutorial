@@ -1,5 +1,7 @@
 package tutorial.strutsTutorial.action;
 
+import tutorial.strutsTutorial.dao.DAOFactory;
+import tutorial.strutsTutorial.dao.LoginDAO;
 import tutorial.strutsTutorial.model.LoginModel;
 
 import com.opensymphony.xwork2.ActionSupport;
@@ -11,11 +13,12 @@ public class LoginAction extends ActionSupport{
 	 */
 	private static final long serialVersionUID = 1L;
 	private LoginModel loginModel;
-	
 	public String execute() throws Exception{
 		System.out.println("Inside Execute");
 		//loginModel = new LoginModel();
-		if("ss".equals(loginModel.getUserName()) && "123".equals(loginModel.getPassword())){
+		LoginDAO loginDAO = DAOFactory.returnLoginDAO();
+		loginDAO.loginUser(loginModel);
+		if(!loginModel.getIsLoginFailure()){
 			return "Success";
 		}
 		else{

@@ -9,6 +9,6 @@
 </head>
 <body>
 	<a href="<s:url action="LoginHere" />">Login</a><br/>
-	<a href="<s:url action="LoginHere" />">Register</a>
+	<a href="<s:url action="RegisterHere" />">Register</a>
 </body>
 </html>

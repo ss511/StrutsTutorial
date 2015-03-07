@@ -9,6 +9,8 @@
 <title>Hello</title>
 </head>
 <body>
-	Hello <s:property value="loginModel.userName" />
+	Hello <s:property value="loginModel.fullName" /><br/>
+	You are a <s:property value="loginModel.gender" /><br/>
+	Your Email Id is <s:property value="loginModel.emailId" /><br/>
 </body>
 </html>

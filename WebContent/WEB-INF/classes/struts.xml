@@ -24,5 +24,13 @@
    				<result name="Success">/jsp/Account.jsp</result>
    				<result name="Failure">/jsp/Login.jsp</result>
    			</action>
+   			<action name="Register" class="tutorial.strutsTutorial.action.RegisterAction" method="execute">
+   				<interceptor-ref name="params"/>
+   				<interceptor-ref name="validation"/>
+   				<interceptor-ref name="workflow" />
+   				<result name="input">jsp/Register.jsp</result>
+   				<result name="Success">/jsp/Account.jsp</result>
+   				<result name="Failure">/jsp/Register.jsp</result>
+   			</action>
    		</package>
    	</struts>
