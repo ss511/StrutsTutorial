@@ -1,2 +1,2 @@
 # StrutsTutorial
-Struts tutorial. Struts features demoed.
+Struts tutorial. In Depth Concepts
